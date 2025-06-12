@@ -1,7 +1,7 @@
 # Predicción de Ganadores de Partidos de Tenis 🏆🎾  
 
 ## Descripción 📖  
-Este proyecto tiene como objetivo desarrollar y evaluar modelos de clasificación para predecir el ganador de partidos de tenis utilizando datos históricos de partidos oficiales. Se exploraron diferentes algoritmos de machine learning, se realizó un análisis exploratorio de datos (EDA) y se optimizaron los modelos para mejorar su rendimiento.  
+Este proyecto tiene como objetivo desarrollar y evaluar modelos de clasificación para predecir el ganador de partidos de tenis utilizando datos históricos de partidos oficiales de la ATP. Se exploraron diferentes algoritmos de machine learning, se realizó un análisis exploratorio de datos (EDA) y se optimizaron los modelos para mejorar su rendimiento.  
 
 ## Dataset 📊  
 El dataset utilizado contiene información de partidos de tenis desde el año 2000 hasta 2025. Algunas de las variables principales incluyen:  
@@ -19,23 +19,20 @@ Se probaron dos algoritmos de clasificación:
 2. **KNeighborsClassifier** (K-NN): Modelo basado en vecinos más cercanos.  
 
 ## Metodología 🛠️  
-- **Análisis exploratorio de datos (EDA)** con histogramas, gráficos de correlación y boxplots.  
+- **Análisis exploratorio de datos (EDA)** con histogramas, gráficos de correlación y visualizaciones.  
 - **Preprocesamiento**: Escalado de variables con `StandardScaler` , Onehot encoding para tratar las variables categoricas y Feature Engineering para nuevas variables predictoras.  
-- **Balanceo de clases**: Uso de **SMOTE** para mejorar el rendimiento en clases desbalanceadas.  
-- **Optimización**: Se aplicó **Grid Search** para ajustar los hiperparámetros de los modelos.  
+- **Balanceo de clases**: Uso de **SMOTE** para mejorar el rendimiento en clases desbalanceadas.    
 
 ## Resultados 📈  
 | Modelo               | Accuracy | Precisión | Recall | F1-Score |  
 |----------------------|---------|-----------|--------|----------|  
-| **SGDClassifier**    | 73%     | 0.72      | 0.73   | 0.72     |  
-| **KNeighborsClassifier** | 70% | 0.69      | 0.70   | 0.69     |  
+| **SGDClassifier**    | 76%     | 0.81      | 0.76   | 0.75     |  
+| **KNeighborsClassifier** | 98% | 0.98      | 0.98   | 0.98     |  
 
-📌 **Ambos modelos superaron el baseline de predicción unicamente tomando en cuenta el ranking mas alto entre jugadores (65% de accuracy).**  
+📌 **Ambos modelos superaron el baseline de predicción unicamente tomando en cuenta si el ganador tenia el mejor ranking (65% de accuracy).**  
 
-## Conclusiones 🏁  
-✔️ **SGDClassifier** es más estable y menos propenso a overfitting.  
-✔️ **KNeighborsClassifier** tuvo un rendimiento alto inicialmente, pero requirió reducir variables para evitar sobreajuste.  
-✔️ **Las variables derivadas (feature engineering) ayudaron a mejorar la precisión del modelo.**  
+## Conclusiones 🏁   
+✔️ **KNeighborsClassifier** tuvo un rendimiento alto y fue el mejor modelo.  
+✔️ Las variables derivadas (feature engineering) ayudaron a mejorar la precisión del modelo.
+✔️ Ambos modelos mejoraron mediante Cross Validation
 
-## Recomendaciones 📌  
-- Evitar **overfitting** en K-NN usando validación cruzada y selección de variables.  
