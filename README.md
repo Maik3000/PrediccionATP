@@ -34,5 +34,5 @@ Se probaron dos algoritmos de clasificación:
 ## Conclusiones 🏁   
 ✔️ **KNeighborsClassifier** tuvo un rendimiento alto y fue el mejor modelo.  
 ✔️ Las variables derivadas (feature engineering) ayudaron a mejorar la precisión del modelo.
-✔️ Ambos modelos mejoraron mediante Cross Validation
+✔️ KNN mejoró mediante Cross Validation llegando a 99% de accuracy.
 
