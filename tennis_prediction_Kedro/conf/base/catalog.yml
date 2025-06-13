@@ -1,0 +1,76 @@
+
+
+atp_tennis:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/atp_tennis.csv
+  metadata:
+    kedro-viz:
+      layer: raw
+
+df_top100:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/df_top100.csv
+  load_args:
+    encoding: latin1
+  save_args:
+    index: False
+    encoding: latin1
+  metadata:
+    kedro-viz:
+      layer: raw
+
+df_top100_features:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/df_top100_features.parquet
+  load_args: {}
+  save_args:
+    index: False
+  metadata:
+    kedro-viz:
+      layer: raw
+
+df_top100_encoder:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/df_top100_encoder.parquet
+  load_args: {}
+  save_args:
+    index: False
+  metadata:
+    kedro-viz:
+      layer: raw
+
+df_top100_scaler:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/df_top100_scaler.parquet
+  load_args: {}
+  save_args:
+    index: False
+  metadata:
+    kedro-viz:
+      layer: raw
+
+X_train:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_train.parquet
+
+X_test:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/X_test.parquet
+
+y_train:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/y_train.parquet
+
+y_test:
+  type: pandas.ParquetDataset
+  filepath: data/05_model_input/y_test.parquet
+
+model:
+  type: pickle.PickleDataset
+  filepath: data/06_models/xgb_model.pkl
+
+y_pred:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/y_pred.parquet
+
+  
