@@ -30,7 +30,7 @@ Se probaron dos algoritmos de clasificación:
 |----------------------|---------|-----------|--------|----------|  
 | **SGDClassifier**    | 76%     | 0.81      | 0.76   | 0.75     |  
 | **KNeighborsClassifier** | 98% | 0.98      | 0.98   | 0.98     |
-| **XGBoost** |99%|99%|99%|
+| **XGBoost**          | 99%     | 0.99      | 0.99   | 0.99     |
 
 📌 **Todos los modelos superaron el baseline de predicción unicamente tomando en cuenta si el ganador tenia el mejor ranking (65% de accuracy).**  
 
