@@ -38,4 +38,4 @@ Se probaron dos algoritmos de clasificación:
 ✔️ **KNeighborsClassifier** junto con **XGBoost** tuvieron un rendimiento alto.  
 ✔️ Las variables derivadas (feature engineering) ayudaron a mejorar la precisión del modelo.
 ✔️ KNN mejoró mediante Cross Validation llegando a 99% de accuracy.
-
+✔️ Kedro permitió una estructura clara, modular y reproducible del proyecto
